@@ -16,4 +16,4 @@ Amazon商品の価格を追跡し、ユーザーのGoogleスプレッドシー�
 - GoogleスプレッドシートAPI
 
 ## デモ
-[https://script.google.com/macros/s/AKfycbyk82DuouzbKVCVetv35mDp74XyONAgz4sfaUc5HVOV11XYa5Mr0kLeggTlwmn0gHFmAg/exec] ※テスト用アカウントで試してください。
+[test](https://script.google.com/macros/s/AKfycbyk82DuouzbKVCVetv35mDp74XyONAgz4sfaUc5HVOV11XYa5Mr0kLeggTlwmn0gHFmAg/exec) ※テスト用アカウントで試してください。
