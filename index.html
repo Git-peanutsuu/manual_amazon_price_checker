@@ -1,0 +1,45 @@
+​<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Amazon価格チェッカー</h1>
+    <input type="text" id="url" placeholder="Amazon商品URLを入力">
+    <input type="number" id="price" placeholder="現在の価格を入力（円）">
+    <button onclick="submitData()">送信</button>
+    <div id="result"></div>
+     <br>
+    <script>
+      function submitData() {
+        const url = document.getElementById('url').value;
+        const price = document.getElementById('price').value;
+        if (url && price) {
+          google.script.run.withSuccessHandler(displayResult).processInput(url, price);
+        } else {
+          document.getElementById('result').innerHTML = "URLと価格を入力してください。";
+        }
+      }
+      function displayResult(message) {
+        document.getElementById('result').innerHTML = message;
+      }
+    </script>
+    <div id='instruction'>
+      <br>
+      これはAmazonの商品のURLを入力することで、価格を追跡していくアプリです。<br>
+      Googleのスプレッドシートに「AmazonPriceChecker」として新規作成・保存されます。<br>
+      ＊自動ではできません。手動です。<br>
+      ＊1日に使用する回数の利用制限がございます。<br>
+      ＊AmazonPriceCheckerの名前を変更しないでください。<br>
+      <br>
+      用意するもの<br>
+      ・Googleアカウント<br>
+      ・Amazon商品のURL<br>
+      <br><br>
+
+      使い方<br>
+      AmazonのURLをコピーする。<br>
+      左の欄に入力する。<br>
+      価格は右の欄に入力する。<br>
+      送信を押す。
+
+    </div>
+  </body>
+</html>
